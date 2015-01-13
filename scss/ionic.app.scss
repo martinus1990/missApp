@@ -1,0 +1,341 @@
+/*$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #4a87ee !default;
+$calm:                            #43cee6 !default;
+$balanced:                        #66cc33 !default;
+$energized:                       #f0b840 !default;
+$assertive:                       #ef4e3a !default;
+$royal:                           #8a6de9 !default;
+$dark:                            black !default;*/
+//$energized: #34495e !default;
+$dark: #000;
+$shadow: #34495e;
+$light: #fff !default;
+
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+$primary: #2c3e50;
+$secondary: #3498db;
+
+/* Extra high density (320), xhdpi */
+@import "_mobile-hdpi";
+
+/* High density (240), hdpi */
+@media (max-height: 800px) {
+  @import "_mobile-mdpi";
+}
+
+/* Medium density (160), mdpi */
+@media (max-height: 400px) {
+@import "_mobile-ldpi";
+}
+
+@media (max-width: 2000px) {
+  .miss-logo {
+    padding-top: 0%;
+  }
+}
+@media (max-width: 800px) {
+  .miss-logo {
+    padding-top: 10%;
+  }
+}
+@media (max-width: 400px) {
+  .miss-logo {
+    padding-top: 40%;
+  }
+}
+
+
+/*----------------------------------Common css------------------------------------*/
+
+.miss-background {
+  background-color: $dark;
+}
+.miss-transparent{
+  background: transparent !important;
+  color: #ffffff;
+}
+.miss-bar {
+  background-color: $dark !important;
+  color: $light;
+}
+
+.search-background{
+  background: url(../images/background.jpg) top repeat-x;
+  background-size: 100% auto;
+  color: #ffffff;
+  border: none;
+}
+.miss-button{
+  height: 50px;
+  color: #ffffff;
+  border: none;
+}
+.search-box {
+  background-color: #7f8c8d;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  i {
+    color: $light;
+  }
+
+  input {
+    color: $light;
+  }
+
+  ::-webkit-input-placeholder {
+    color: $light;
+  }
+
+  :-moz-placeholder {
+    /* Firefox 18- */
+    color: $light;
+  }
+
+  ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: $light;
+  }
+
+  :-ms-input-placeholder {
+    color: $light;
+  }
+}
+
+
+/*----------------------------------Menu----------------------------------------*/
+
+  /*--------------------------------Search-View--------------------------------------*/
+
+  /*---------------------------------Detail-View----------------------------------*/
+
+    .detail-tab{
+      .row + .row {
+        margin-top: -5px;
+        padding-top: 5%;
+      }
+      .col{
+        word-break: break-word;
+      }
+    }
+
+
+
+  li.rn-carousel-slide {
+    text-align: center;
+    vertical-align: middle;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  .rn-carousel-control {
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .tabs {
+    display: none;
+  }
+
+  .has-tabs {
+    bottom: 0;
+  }
+
+  .detail-tab {
+    border: none;
+    box-shadow: inset 0 22px 5px -20px $shadow;
+    .text {
+      color: #ffffff;
+      word-break: break-word ;
+    }
+  }
+
+.information-quote {
+  blockquote {
+    background: transparent;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+    text-align: center;
+    border: none !important;
+  }
+  blockquote:before {
+    color: #ffffff;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+  blockquote:after {
+    color: #ffffff;
+    content: close-quote;
+    font-size: 4em;
+    line-height: 0.8em;
+    margin-left: 0.25em;
+    vertical-align: -0.4em;
+  }
+  blockquote p {
+    display: inline;
+  }
+}
+
+  /*-------------------------------All pictures------------------*/
+
+  .general-pictures, .general-videos, .general-sponsors {
+    text-align: center;
+    font-size: 22px;
+  }
+
+.general-pictures, .deluxe-ticket {
+  opacity: 0.8;
+}
+
+  /*----------------------------------Clips-----------------------*/
+
+#video-detail-list {
+  padding-top: 10px;
+}
+
+  /*-------------------------------Sponsors------------------*/
+
+.miss-sponsors-img img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 80%;
+  max-width: 400px;
+  max-height: 400px;
+  padding-top: 40px;
+}
+
+  /*-----------------------Tickets-------------------------*/
+
+.ticket-info {
+  background-color: $dark;
+  color: $light;
+
+  table {
+    margin: 10px;
+    margin-left: 60px;
+
+    td {
+      padding-right: 10px;
+    }
+
+    td:first-child {
+      font-weight: bold;
+    }
+
+    tr:nth-last-child(2) {
+      td {
+        padding-bottom: 10px;
+      }
+
+    }
+  }
+
+  .ticket-box {
+    text-align: center;
+
+    h4 {
+      color: #9b59b6;
+      margin: 0;
+    }
+
+    h5 {
+      color: #ecf0f1;
+      margin: 0;
+    }
+
+    p {
+      color: #ecf0f1;
+      font-weight: bold;
+    }
+  }
+}
+
+.ticket-header {
+  position: relative;
+  display: block;
+  height: 50px;
+  width: 100%;
+  margin-left: 5px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+  h2 {
+    position: relative;
+    left: 50px;
+    top: 10px;
+    color: $light;
+  }
+
+  &:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    border: 25px solid black;
+    border-color: transparent transparent transparent black;
+    top: 0px;
+  }
+}
+
+@mixin ticket-background($background-image) {
+  background-image: url($background-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
+
+.show-ticket {
+  @include ticket-background("../images/ticket-show.jpg");
+}
+
+
+.combi-ticket {
+  @include ticket-background("../images/ticket-combi.jpg");
+}
+
+.deluxe-ticket {
+  @include ticket-background("../images/ticket-deluxe.jpg");
+}
+
+.exclusive-ticket {
+  @include ticket-background("../images/ticket-exclusive.jpg");
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.last {
+  margin-bottom: 5% !important;
+}

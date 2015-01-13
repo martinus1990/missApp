@@ -1,0 +1,12 @@
+<ion-view title="Partners">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon ion-miss"></button>
+    </ion-nav-buttons>
+    <ion-content class="search-background" overflow-scroll="true">
+        <div class="list card" ng-repeat="sponsor in sponsors | orderBy:'colour'" ng-class="{'last':$last}">
+            <div class="item general-sponsors miss-button {{sponsor.colour}}" ng-click="getSponsor(sponsor.id)">
+                {{sponsor.name}}
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

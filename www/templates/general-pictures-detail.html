@@ -1,0 +1,12 @@
+<ion-view  title={{picture.name}}>
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon ion-miss"></button>
+    </ion-nav-buttons>
+    <ion-content class="search-background">
+        <ul rn-carousel rn-carousel-control="true" class="image">
+            <li ng-repeat="p in picture.links" >
+                <img ng-src="{{p.url}}">
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>

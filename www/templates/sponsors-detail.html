@@ -1,0 +1,15 @@
+<ion-view title="{{sponsor.name}}">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon ion-miss"></button>
+    </ion-nav-buttons>
+    <ion-content class="has-header search-background">
+            <div class="miss-sponsors-img">
+                <img ng-src={{sponsor.icon}} ng-click="openSponsorWebsite(sponsor.url)" alt="Geen afbeelding beschikbaar">
+            </div>
+            <div class="item item-image miss-clips-item" ng-if="showVideo(sponsor)">
+                <div class="video-container">
+                    <iframe src={{sponsor.video}}></iframe>
+                </div>
+            </div>
+    </ion-content>
+</ion-view>

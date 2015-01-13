@@ -1,0 +1,13 @@
+<ion-view title={{nominee.name}}>
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon ion-miss"></button>
+    </ion-nav-buttons>
+    <ion-content class="has-header miss-background">
+            <div class="list card" ng-repeat="picture in nominee.pictures">
+                <div class="item item-image miss-pictures-item">
+                    <img ng-src={{picture.url}}/>
+                </div>
+            </div>
+        <div class="index-whitespace-10"></div>
+    </ion-content>
+</ion-view>

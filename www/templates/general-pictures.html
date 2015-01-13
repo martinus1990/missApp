@@ -1,0 +1,13 @@
+<ion-view title={{nominee.name}}>
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon ion-miss"></button>
+    </ion-nav-buttons>
+    <ion-content class="has-header search-background">
+        <div class="list card" ng-repeat="picture in pictures">
+            <div class="item general-pictures miss-button deluxe-ticket" ng-click="getPicture($index)">
+                {{picture.name}}
+            </div>
+        </div>
+    </ion-content>
+    </ion-footer-bar>
+</ion-view>

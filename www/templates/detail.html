@@ -1,0 +1,139 @@
+<ion-view title="Kandidaat">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+
+    <ion-tabs>
+        <ion-tab title="Informatie">
+            <ion-content class="search-background">
+                <div class="detail-nominee-profile first">
+                    <div class="detail-nominee-profile-picture">
+                        <div class="circular">
+                            <img ng-src="{{nominee.thumbnail}}"/>
+                        </div>
+                    </div>
+                    <div class="detail-nominee-profile-detail">
+                        <h4>{{nominee.name}}</h4>
+
+                        <p><i class="ion-location detail-location"></i>{{nominee.address}}</p>
+                    </div>
+                </div>
+                <div class="detail-tab-menu">
+                    <div class="first tab selected" ng-click="selectTabWithIndex(0)">
+                        <i class="icon ion-lightbulb"></i>
+                        <p>Informatie</p>
+                    </div>
+                    <div class="second tab" ng-click="selectTabWithIndex(1)">
+                        <i class="icon ion-images"></i>
+                        <p>Foto's</p>
+                    </div>
+                    <div class="third tab" ng-click="selectTabWithIndex(2)">
+                        <i class="icon ion-film-marker"></i>
+                        <p>Video</p>
+                    </div>
+                    <div style="clear:both;"></div>
+                </div>
+                <div class="item item-text-wrap detail-tab miss-transparent">
+                    <div class="row">
+                        <div class="col">
+                            <b>Leeftijd</b>
+                        </div>
+                        <div class="col text">
+                            {{nominee.age}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <b>Studies/Beroep</b>
+                        </div>
+                        <div class="col text">
+                            {{nominee.job}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <b>Hobby</b>
+                        </div>
+                        <div class="col text">
+                            {{nominee.hobby}}
+                        </div>
+                    </div>
+                </div>
+                <div class="information-quote">
+                    <blockquote>{{nominee.quote}}</blockquote>
+                </div>
+            </ion-content>
+
+        </ion-tab>
+        <ion-tab title="Foto's">
+            <ion-content class="search-background">
+                <div class="detail-nominee-profile second">
+                    <div class="detail-nominee-profile-picture">
+                        <div class="circular">
+                            <img ng-src="{{nominee.thumbnail}}"/>
+                        </div>
+                    </div>
+                    <div class="detail-nominee-profile-detail">
+                        <h4>{{nominee.name}}</h4>
+
+                        <p><i class="ion-location detail-location"></i>{{nominee.address}}</p>
+                    </div>
+                </div>
+                <div class="detail-tab-menu">
+                    <div class="first tab" ng-click="selectTabWithIndex(0)">
+                        <i class="icon ion-lightbulb"></i>
+                        <p>Informatie</p>
+                    </div>
+                    <div class="second tab selected" ng-click="selectTabWithIndex(1)">
+                        <i class="icon ion-images"></i>
+                        <p>Foto's</p>
+                    </div>
+                    <div class="third tab" ng-click="selectTabWithIndex(2)">
+                        <i class="icon ion-film-marker"></i>
+                        <p>Video</p>
+                    </div>
+                    <div style="clear:both;"></div>
+                </div>
+                <div class="item item-text-wrap detail-tab miss-transparent">
+                    <ul rn-carousel rn-carousel-indicator="true" rn-carousel-buffered="true" rn-carousel-control="true" class="image">
+                        <li ng-repeat="picture in nominee.pictures"><img ng-src="{{picture.url}}"></li>
+                    </ul>
+                </div>
+            </ion-content>
+        </ion-tab>
+        <ion-tab title="Video">
+            <ion-content class="search-background">
+                <div class="detail-nominee-profile third">
+                    <div class="detail-nominee-profile-picture">
+                        <div class="circular">
+                            <img ng-src="{{nominee.thumbnail}}"/>
+                        </div>
+                    </div>
+                    <div class="detail-nominee-profile-detail">
+                        <h4>{{nominee.name}}</h4>
+
+                        <p><i class="ion-location detail-location"></i>{{nominee.address}}</p>
+                    </div>
+                </div>
+                <div class="detail-tab-menu">
+                    <div class="first tab" ng-click="selectTabWithIndex(0)">
+                        <i class="icon ion-lightbulb"></i>
+                        <p>Informatie</p>
+                    </div>
+                    <div class="second tab" ng-click="selectTabWithIndex(1)">
+                        <i class="icon ion-images"></i>
+                        <p>Foto's</p>
+                    </div>
+                    <div class="third tab selected" ng-click="selectTabWithIndex(2)">
+                        <i class="icon ion-film-marker"></i>
+                        <p>Video</p>
+                    </div>
+                    <div style="clear:both;"></div>
+                </div>
+                <div class="item item-text-wrap detail-tab miss-transparent">
+                    <iframe src="{{nominee.video}}" width="100%"></iframe>
+                </div>
+            </ion-content>
+        </ion-tab>
+    </ion-tabs>
+</ion-view>

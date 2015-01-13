@@ -1,0 +1,19 @@
+<ion-view title="Kandidaten">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+        <label class="item item-input search-box">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input type="text" placeholder="Zoeken" ng-model="searchQuery">
+        </label>
+        <div class="list">
+            <a class="item item-thumbnail-left" ng-click="getDetail(nominee.id)"
+               ng-repeat="nominee in nominees | filter:searchQuery | orderBy:number">
+                <img ng-src="{{nominee.thumbnail}}" class="list-item-thumbnail" />
+                <h2>{{nominee.name}}</h2>
+                <p>Toon informatie ></p>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,168 @@
+.miss-logo {
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 5%;
+}
+
+.menu {
+  .scroll-content {
+    background-color: #3f4041 !important;
+    height: 100% !important;
+    .scroll {
+      height: 100% !important;
+      .menu-fill {
+        height: 100% !important;
+        background-color: #3f4041 !important;
+      }
+      .menu-item{
+        display: flex;
+        justify-content:center;
+        align-content:center;
+        flex-direction:column;
+        font-size: 25px;
+      }
+    }
+  }
+
+  .list {
+    height: 100% !important;
+    .item, .list .item a {
+      background-color: #3f4041 !important;
+      border: none;
+      border-top: 1px solid #464646;
+      border-bottom: 2px solid #333333;
+      color: #F0F1F1;
+      height: 11%;
+
+      &:first-child {
+        border-top: 2px solid #464646;
+      }
+
+      &:last-child {
+        border-bottom: 1px solid #333333;
+      }
+    }
+  }
+}
+
+.detail-nominee-profile {
+  position: relative;
+  background: url(../images/background-detail.jpg) center repeat-x!important;
+  background-size:  100% auto;
+  width: 100%;
+  height: 200px;
+  box-shadow: 0 4px 8px $shadow;
+}
+
+.detail-nominee-profile-picture {
+  width: 150px;
+  float: left;
+}
+
+
+.item-thumbnail-left {
+  padding-left: 105px;
+  min-height: 200px;
+  .list-item-thumbnail {
+    top: 0px !important;
+    left: 0px !important;
+    max-width: 160px !important;
+    max-height: 200px !important;
+    min-height: 200px;
+  }
+
+  h2{
+    padding-top: 30px;
+    padding-left: 205px;
+    font-size: 25px;
+  }
+  p{
+    color: #666;
+    font-size: 25px;
+    padding-left: 205px;
+  }
+}
+
+.detail-nominee-profile-detail {
+  position: relative;
+  top: 60px;
+  left: 150px;
+  float: left;
+  color: #ffffff;
+  width: 360px;
+
+  h4 {
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+  }
+
+  p {
+    padding-top: 10px;
+    font-size: 25px;
+  }
+}
+
+.circular {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  left: 80px;
+  top: 30px;
+
+  img {
+    min-height: 100%;
+    width: 140px;
+  }
+}
+
+.detail-location {
+  padding-right: 10px;
+}
+.detail-tab{
+  font-size: 20px;
+}
+blockquote{
+  font-size: 20px !important;
+}
+.detail-tab-menu {
+  width: 100%;
+  color: #ecf0f1;
+
+  .tab {
+    float: left;
+    display: block;
+    width: 33.333%;
+    height: 100px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 20px;
+
+    i {
+      position: relative;
+      top: 20px;
+      font-size: 30px;
+    }
+  }
+
+  .first {
+    background-color: #14b9d6;
+  }
+
+  .second {
+    background-color: #f27935;
+  }
+
+  .third {
+    background-color: #1fbba6;
+  }
+
+  .selected {
+    color: $light;
+  }
+}
