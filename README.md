@@ -11,4 +11,5 @@ De 20 finalistes ‘Miss Limburg voor Miss België 2015’ zijn:
 Commands:
 
 	nmp install (install dependecies)
-	node tasks/plugins.js (installs plugins listen in package.json)
+	node tasks/plugins.js (installs plugins listed in package.json)
+	ionic serve
