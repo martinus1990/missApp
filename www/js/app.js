@@ -1,4 +1,4 @@
-angular.module('missLimburg', ['ionic', 'missLimburg.controllers', 'missLimburg.services','angular-carousel'])
+angular.module('missApp', ['ionic', 'missApp.controllers', 'missApp.services','angular-carousel'])
 
     .run(function ($ionicPlatform, $ionicPopup) {
         $ionicPlatform.ready(function () {

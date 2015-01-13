@@ -1,9 +1,9 @@
-angular.module('missLimburg.controllers', [])
+angular.module('missApp.controllers', ['missApp.config'])
 
     .controller('SearchController', function() {
     })
 
-    .controller("MenuController",function($scope, ListService,SponsorsService,PicturesService,VideosService,$window,$ionicPopup,Nominee,Sponsors,Pictures,Videos){
+    .controller("MenuController",['CONTROLLERS_CONFIG'],function($scope, ListService,SponsorsService,PicturesService,VideosService,$window,$ionicPopup,Nominee,Sponsors,Pictures,Videos,CONTROLLERS_CONFIG){
 
         $scope.showHome = function() {
             $window.location.href = "#/app/search";
@@ -20,12 +20,12 @@ angular.module('missLimburg.controllers', [])
         };
         $scope.openFacebook = function(){
             if(checkConnection()){
-                window.open(encodeURI('http://www.facebook.com/misslimburg'), '_system', 'location=yes');
+                window.open(encodeURI(CONTROLLERS_CONFIG.FACEBOOK_URL), '_system', 'location=yes');
             }
         };
         $scope.openTvlShow = function(){
             if(checkConnection()){
-                window.open(encodeURI('http://www.tvl.be/misslimburg'), '_system', 'location=yes');
+                window.open(encodeURI(CONTROLLERS_CONFIG.TVL_URL), '_system', 'location=yes');
             }
         };
         $scope.openTickets = function(){

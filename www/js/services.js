@@ -1,4 +1,4 @@
-angular.module('missLimburg.services', ['ngResource'])
+angular.module('missApp.services', ['ngResource','missApp.config'])
 
     .factory('ListService', function () {
         var service = {};
@@ -56,21 +56,21 @@ angular.module('missLimburg.services', ['ngResource'])
         return service;
     })
 
-    .factory('Nominee', ['$resource', function ($resource) {
+    .factory('Nominee', ['$resource','SERVICES_CONFIG', function ($resource,SERVICES_CONFIG) {
         return {
-            search: $resource("http://80.240.138.74:4567/nominees/search/limburg/:search", {search: '@search'}, {
+            search: $resource( SERVICES_CONFIG.SERVER_URL + ":4567/nominees/search/" + SERVICES_CONFIG.MISS_CONTEST + "/:search", {search: '@search'}, {
                 query: {
                     method: 'GET',
                     isArray: true
                 }
             }),
-            findAll: $resource("http://80.240.138.74:4567/nominees/limburg", {}, {
+            findAll: $resource(SERVICES_CONFIG.SERVER_URL +":4567/nominees/" + SERVICES_CONFIG.MISS_CONTEST, {}, {
                 query: {
                     method: 'GET',
                     isArray: true
                 }
             }),
-            findOne: $resource("http://80.240.138.74:4567/nominee/:id", {id: '@id'}, {
+            findOne: $resource(SERVICES_CONFIG.SERVER_URL + ":4567/nominee/:id", {id: '@id'}, {
                 query: {
                     method: 'GET',
                     isArray: false
@@ -79,15 +79,15 @@ angular.module('missLimburg.services', ['ngResource'])
         }
     }])
 
-    .factory('Pictures', ['$resource', function ($resource) {
+    .factory('Pictures', ['$resource','SERVICES_CONFIG', function ($resource,SERVICES_CONFIG) {
         return {
-            findAll: $resource("http://80.240.138.74:4567/picture/region/limburg", {}, {
+            findAll: $resource(SERVICES_CONFIG.SERVER_URL + ":4567/picture/region/" + SERVICES_CONFIG.MISS_CONTEST, {}, {
                 query: {
                     method: 'GET',
                     isArray: true
                 }
             }),
-            findOne: $resource("http://80.240.138.74:4567/picture/:id", {id: '@id'}, {
+            findOne: $resource(SERVICES_CONFIG.SERVER_URL + ":4567/picture/:id", {id: '@id'}, {
                 query: {
                     method: 'GET',
                     isArray: false
@@ -95,15 +95,15 @@ angular.module('missLimburg.services', ['ngResource'])
             })
         }
     }])
-    .factory('Sponsors', ['$resource', function ($resource) {
+    .factory('Sponsors', ['$resource','SERVICES_CONFIG', function ($resource,SERVICES_CONFIG) {
         return {
-            findAll: $resource("http://80.240.138.74:4567/sponsor", {}, {
+            findAll: $resource(SERVICES_CONFIG.SERVER_URL + ":4567/sponsor", {}, {
                 query: {
                     method: 'GET',
                     isArray: true
                 }
             }),
-            findOne: $resource("http://80.240.138.74:4567/sponsor/:id", {id: '@id'}, {
+            findOne: $resource(SERVICES_CONFIG.SERVER_URL + ":4567/sponsor/:id", {id: '@id'}, {
                 query: {
                     method: 'GET',
                     isArray: false
@@ -111,15 +111,15 @@ angular.module('missLimburg.services', ['ngResource'])
             })
         }
     }])
-    .factory('Videos', ['$resource', function ($resource) {
+    .factory('Videos', ['$resource','SERVICES_CONFIG', function ($resource,SERVICES_CONFIG) {
         return {
-            findAll: $resource("http://80.240.138.74:4567/video/region/limburg", {}, {
+            findAll: $resource(SERVICES_CONFIG.SERVER_URL +":4567/video/region/" + SERVICES_CONFIG.MISS_CONTEST, {}, {
                 query: {
                     method: 'GET',
                     isArray: true
                 }
             }),
-            findOne: $resource("http://80.240.138.74:4567/video/:id", {id: '@id'}, {
+            findOne: $resource(SERVICES_CONFIG.SERVER_URL +":4567/video/:id", {id: '@id'}, {
                 query: {
                     method: 'GET',
                     isArray: false
