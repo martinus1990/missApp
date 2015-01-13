@@ -3,7 +3,7 @@ angular.module('missApp.controllers', ['missApp.config'])
     .controller('SearchController', function() {
     })
 
-    .controller("MenuController",['CONTROLLERS_CONFIG'],function($scope, ListService,SponsorsService,PicturesService,VideosService,$window,$ionicPopup,Nominee,Sponsors,Pictures,Videos,CONTROLLERS_CONFIG){
+    .controller("MenuController",['CONTROLLERS_CONFIG',function($scope, ListService,SponsorsService,PicturesService,VideosService,$window,$ionicPopup,Nominee,Sponsors,Pictures,Videos,CONTROLLERS_CONFIG){
 
         $scope.showHome = function() {
             $window.location.href = "#/app/search";
@@ -78,7 +78,7 @@ angular.module('missApp.controllers', ['missApp.config'])
                 return true;
             }
         }
-    })
+    }])
 
 
     .controller('ListController', function($scope, ListService,$window) {
